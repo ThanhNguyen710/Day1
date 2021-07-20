@@ -1,11 +1,11 @@
 import React from "react";
 import "./Home.css";
-function Home(props) {
+function About(props) {
     return (
         <div>
-            <h2>Đây là trang chủ</h2>
+            <h2>Thông tin trang web</h2>
         </div>
     ); 
 }
 
-export default Home;
+export default About;
