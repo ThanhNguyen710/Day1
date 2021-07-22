@@ -9,7 +9,7 @@ import {
     Link
   } from "react-router-dom";
   
-  export default function App() {
+  const Layout = ({children}) => {
     return (
       <Router>
         <div className="App">
@@ -22,10 +22,7 @@ import {
                 <Link className="nav-link" to="/About">About</Link>
               </li>
             </ul>
-          </nav>
-  
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
+          </nav>           
           <Switch>
             <Route path="/About">
               <About />
@@ -35,6 +32,8 @@ import {
             </Route>
           </Switch>
         </div>
+        {children}
       </Router>
     );
   }
+  export default Layout;

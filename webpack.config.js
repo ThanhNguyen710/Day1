@@ -20,6 +20,17 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    contentBase: './src',
+    host: '0.0.0.0',
+    port: 3001,
+    public: 'localhost:3001',
+    open: true,
+    historyApiFallback: {
+      disableDotRule: true
+    },
+    watchContentBase: true
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html"
